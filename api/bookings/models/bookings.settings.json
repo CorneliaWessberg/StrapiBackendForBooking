@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "Bookings",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "text"
+    },
+    "lastname": {
+      "type": "text"
+    },
+    "mobile": {
+      "type": "biginteger"
+    },
+    "users_permissions_user": {
+      "via": "bookings",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "class": {
+      "type": "string"
+    }
+  }
+}
